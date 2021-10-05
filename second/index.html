@@ -33,9 +33,9 @@
       <select class="form-select" aria-label="Default select example">
         <option selected>Год выпуска</option>
         <option value="200" class="2011">2011</option>
-        <option value="300" class="2011" value="2012">2012</option>
-        <option value="400" class="2011">2013</option>
-        <option value="500" class="2011">2014</option>
+        <option value="300" class="2012" >2012</option>
+        <option value="400" class="2013">2013</option>
+        <option value="500" class="2014">2014</option>
         <option value="600" class="2015">2015</option>
         <option value="700" class="2016">2016</option>
         <option value="800" class="2017">2017</option>
@@ -74,7 +74,7 @@
   </div>
   <button class="button">Расчитать</button>
 
-  <input class="result">
+  <p class="result">стоимость</p> 
 </div>
 
 <script>
@@ -90,9 +90,12 @@
       result += num;
 
     }
+    
     let resultNode = document.querySelector(".result");
     resultNode.textContent = result;
+
   }
+
   clickButton.addEventListener("click", onClick);
 </script>
 
