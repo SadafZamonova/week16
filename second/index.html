@@ -19,40 +19,40 @@
     <div class="col">
       <select class="form-select" aria-label="Default select example">
         <option selected>Марка</option>
-        <option value="1000"  class="Acura">Acura</option>
-        <option value="1100"  class="Alfa Romeo">Alfa Romeo</option>
-        <option value="1200"  class="Aston Martin">Aston Martin</option>
-        <option value="1300"  class="Audi">Audi</option>
-        <option value="1400"  class="Bentley">Bentley</option>
-        <option value="1500"  class="BMW">BMW</option>
-        <option value="1600"  class="Chevrolet">Chevrolet</option>
+        <option value="1000" class="Acura">Acura</option>
+        <option value="1100" class="Alfa Romeo">Alfa Romeo</option>
+        <option value="1200" class="Aston Martin">Aston Martin</option>
+        <option value="1300" class="Audi">Audi</option>
+        <option value="1400" class="Bentley">Bentley</option>
+        <option value="1500" class="BMW">BMW</option>
+        <option value="1600" class="Chevrolet">Chevrolet</option>
       </select>
     </div>
 
     <div class="col">
       <select class="form-select" aria-label="Default select example">
         <option selected>Год выпуска</option>
-        <option value="200"  class="2011" >2011</option>
-        <option value="300"  class="2011"value="2012">2012</option>
-        <option value="400"  class="2011">2013</option>
-        <option value="500"  class="2011">2014</option>
-        <option value="600"  class="2015">2015</option>
-        <option value="700"  class="2016">2016</option>
-        <option value="800"  class="2017">2017</option>
-        <option value="900"  class="2018">2018</option>
-        <option value="1000"  class="2019">2019</option>
-        <option value="1100"  class="2020">2020</option>
+        <option value="200" class="2011">2011</option>
+        <option value="300" class="2011" value="2012">2012</option>
+        <option value="400" class="2011">2013</option>
+        <option value="500" class="2011">2014</option>
+        <option value="600" class="2015">2015</option>
+        <option value="700" class="2016">2016</option>
+        <option value="800" class="2017">2017</option>
+        <option value="900" class="2018">2018</option>
+        <option value="1000" class="2019">2019</option>
+        <option value="1100" class="2020">2020</option>
       </select>
     </div>
     <div class="col">
       <select class="form-select" aria-label="Default select example">
         <div id="result">
           <option id="color" selected>Цвет</option>
-          <option value="500"  class="white">Белый</option>
-          <option value="600"  class="black">черный</option>
-          <option value="700"  class="gray">серый</option>
-          <option value="800"  class="red">красный</option>
-          <option value="900"  class="blue">синий</option>
+          <option value="500" class="white">Белый</option>
+          <option value="600" class="black">черный</option>
+          <option value="700" class="gray">серый</option>
+          <option value="800" class="red">красный</option>
+          <option value="900" class="blue">синий</option>
         </div>
       </select>
     </div>
@@ -72,23 +72,29 @@
       </label>
     </div>
   </div>
-  <button class="blok2">Расчитать</button>
+  <button class="button">Расчитать</button>
 
   <input class="result">
 </div>
 
 <script>
-  let acura = document.querySelector(".Acura");
-  let alfaRomeo = document.querySelector(".Alfa Romeo");
-  let astonMartin = document.querySelector(".AcuraAston Martin");
-  let audi = document.querySelector(".Audi");
-  let bentley = document.querySelector(".Bentley");
-  let bMW = document.querySelector(".BMW");
-  let chevrolet = document.querySelector(".Chevrolet");
-  
-  
-  
-  </script>
+  let selectors = document.querySelectorAll("option");
+  let clickButton = document.querySelector(".button");
+  let formCheck = document.querySelectorAll(".form-check");
+
+  function onClick() {
+    let result = 0;
+    for (let i = 0; i < 3; i++) {
+      let num = +selectors[i].value;
+      // let num1= +formCheck[i].value;
+      result += num;
+
+    }
+    let resultNode = document.querySelector(".result");
+    resultNode.textContent = result;
+  }
+  clickButton.addEventListener("click", onClick);
+</script>
 
 
 
