@@ -3,6 +3,7 @@ let clickButton = document.querySelector(".button");
 
 
 function onClick() {
+  debugger;
   let result = 0;
   
   for (let i = 0; i < 3 ; i++) {
@@ -10,9 +11,11 @@ function onClick() {
      result += num ;
   }
 
-  let input = +document.querySelectorAll("input").value;
+    const formInput = +document.querySelectorAll("input[name=flexRadioDefault]:checked")[0].value;
+  
   let resultNode = document.querySelector(".result");
-  resultNode.textContent=result + input;
+  
+  resultNode.textContent=result + formInput;
 
 }
 
